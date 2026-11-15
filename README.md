@@ -40,7 +40,15 @@ A full-stack MERN app (React + Vite, Express, MongoDB, JWT auth). Upload your ow
    ```
    - App: http://localhost:5173
    - API health check: http://localhost:5000/api/health (shows whether AI is configured)
+## 🔐 Demo Login Credentials
 
+Use the following credentials to explore TrendCraft AI:
+
+
+| **Email** | epshita1802@gmail.com |
+| **Password** | 12345678 |
+
+**Note:** These are sample demo credentials provided for testing purposes.
 ## Gemini API key
 1. Create a key in Google AI Studio: https://aistudio.google.com/apikey
 2. Put it in `server\.env` (never in client code, never in Git):
