@@ -1,0 +1,53 @@
+/* Outfit cards, states and notices (replaces the old mannequin visualiser) */
+.state-box{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;background:#fffdfa;border:1px solid #f0e7e0;border-radius:15px;padding:30px 24px;max-width:520px;margin:0 auto;box-shadow:var(--shadow)}
+.state-box svg{color:var(--rose)}
+.state-box h2{font-size:1.4rem;margin:6px 0 4px}
+.state-box p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 14px}
+.notice{display:flex;gap:11px;align-items:flex-start;background:#f8f0e5;border:1px solid #efe1cc;border-radius:12px;padding:12px 14px;color:#8a6f4c}
+.notice.warn{background:#fbeeee;border-color:#f0d6d6;color:#9a5a60}
+.notice svg{flex-shrink:0;margin-top:2px}
+.notice strong{font-size:11px;display:block;margin-bottom:2px}
+.notice p{font-size:11px;line-height:1.6;margin:0}
+.count-grid{grid-template-columns:repeat(3,1fr)}
+.outfit-stack{display:flex;flex-direction:column;gap:16px}
+.working-note{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin:0}
+.outfit-card{background:#fffdfa;border:1px solid #f0e7e0;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.outfit-card.skeleton{min-height:320px;background:linear-gradient(100deg,#f6eee8 30%,#fbf6f1 50%,#f6eee8 70%);background-size:200% 100%;animation:shimmer 1.4s linear infinite;border-color:#f0e7e0}
+@keyframes shimmer{to{background-position:-200% 0}}
+.outfit-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:14px}
+.outfit-card-head h3{font:1.4rem 'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.02em;margin:9px 0 0;line-height:1.2}
+.outfit-badges{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.meta-chip{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8f7f79;background:#f6efea;border-radius:20px;padding:4px 8px}
+.source-badge{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;border-radius:20px;padding:4px 9px}
+.source-badge.ai{background:#eae5f2;color:#74649a}
+.source-badge.local{background:#f1ede9;color:#7d716b}
+.score-ring{flex-shrink:0;cursor:help}
+.score-ring small{font-size:6px;text-align:center;line-height:1.2}
+.outfit-collage{display:flex;flex-direction:column;gap:10px}
+.collage-main{display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:10px}
+.collage-extras{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.collage-tile{margin:0;display:flex;flex-direction:column;min-width:0}
+.collage-photo{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#f5ede8;border:1px solid #f0e7e0}
+.collage-photo>img,.collage-photo>.cloth-placeholder{width:100%;height:100%}
+.collage-photo>img{object-fit:cover;display:block}
+.collage-tile.optional .collage-photo{aspect-ratio:1/1}
+.collage-tile figcaption{padding:7px 2px 0;display:flex;flex-direction:column;gap:2px}
+.collage-tile figcaption strong{font-size:11px;line-height:1.3}
+.collage-tile figcaption span{font-size:9px;color:#9a8c86}
+.collage-tile figcaption em{font-size:9px;color:#8a7c76;line-height:1.5}
+.outfit-collage.compact .collage-photo{aspect-ratio:1/1;border-radius:9px}
+.outfit-collage.compact .collage-tile figcaption strong{font-size:10px}
+.outfit-collage.compact .collage-extras{grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}
+.outfit-notes{margin-top:14px}
+.outfit-explain{font-size:12px;line-height:1.8;color:#82736d;margin:0 0 8px}
+.tip-list{margin:5px 0 0;padding-left:15px;font-size:10px;color:#93847d;line-height:1.7}
+.outfit-card-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid #f2ebe6}
+.score-note{font-size:9px;line-height:1.5;color:#a89b95;margin:0;max-width:300px}
+.today-collage{min-width:0}
+.today-details .source-badge{margin-right:6px}
+.saved-look-photos{margin:9px 13px 0;display:flex;flex-direction:column;gap:6px}
+.saved-title{font:19px 'Playfair Display',Georgia,serif;font-weight:500;text-transform:capitalize;color:#8d5d62}
+.saved-meta{font-size:9px;color:#a18b87;margin-bottom:4px}
+.saved-missing{font-size:9px;color:#b0707a}
+.saved-card-body .source-badge{margin-bottom:8px}
+@media(max-width:650px){.outfit-card{padding:15px}.outfit-card-foot{flex-direction:column;align-items:stretch}.score-note{max-width:none}.collage-main{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -1,0 +1,15 @@
+{
+  "name": "trendcraft-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TrendCraft AI — personal wardrobe and outfit styling app",
+  "scripts": {
+    "setup": "npm install && npm --prefix client install && npm --prefix server install",
+    "dev": "concurrently -n SERVER,CLIENT -c magenta,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
